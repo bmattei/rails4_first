@@ -9,6 +9,10 @@ gem 'rails', '4.0.0'
 group :development do
 	gem 'sqlite3', '1.3.8'
 end
+group :production do
+	gem 'pg', '0.15.1'            # PostgreSQL is Heroku's default DB
+  	gem 'rails_12factor', '0.0.2' # needed by Heroku to serve static assets
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.0'
